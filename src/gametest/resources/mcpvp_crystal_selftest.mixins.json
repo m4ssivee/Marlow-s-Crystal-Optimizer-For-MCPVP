@@ -1,0 +1,8 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.m4ssivee.mcpvpcrystal.test.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": ["TestTickMixin"],
+  "injectors": { "defaultRequire": 1 }
+}

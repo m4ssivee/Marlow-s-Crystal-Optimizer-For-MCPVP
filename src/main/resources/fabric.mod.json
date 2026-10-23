@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "mcpvp_crystal_optimizer",
+  "version": "${version}",
+  "name": "Marlow's Crystal Optimizer for MCPVP",
+  "description": "A crystal optimizer made to work on the MCPVP server: end crystals disappear on your screen the moment you break them, instead of after the server round trip. Based on Marlow's Crystal Optimizer and Walksy's Crystal Optimizer.",
+  "authors": [
+    "m4ssivee"
+  ],
+  "contributors": [
+    "Bram and Marlow (Marlow's Crystal Optimizer)",
+    "Walksy (Walksy Crystal Optimizer)"
+  ],
+  "contact": {
+    "sources": "https://github.com/m4ssivee"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "io.github.m4ssivee.mcpvpcrystal.McpvpCrystalClient"
+    ]
+  },
+  "mixins": [
+    "mcpvp_crystal_optimizer.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader}",
+    "minecraft": "${mc_compat}",
+    "java": ">=21"
+  }
+}

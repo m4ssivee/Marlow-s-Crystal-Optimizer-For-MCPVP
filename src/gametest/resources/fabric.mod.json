@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "mcpvp_crystal_selftest",
+  "version": "0.0.0",
+  "name": "Crystal Optimizer self test (dev only)",
+  "environment": "client",
+  "mixins": ["mcpvp_crystal_selftest.mixins.json"],
+  "depends": { "mcpvp_crystal_optimizer": "*" }
+}
