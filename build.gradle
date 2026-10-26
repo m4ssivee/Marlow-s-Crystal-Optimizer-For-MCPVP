@@ -16,11 +16,14 @@ def variants = [
 def v = variants[findProperty('variant')]
 if (v == null) throw new GradleException("Unknown variant '${findProperty('variant')}', use v1, v2 or v3")
 
-// -Pmc=<version> compiles the same sources against another Minecraft version of the same variant, only to prove the
-// code and every mixin target resolve there. The jar is still named after the variant.
-def mcVersion = findProperty('mc') ?: v.mc
+// -Pmc=<version> builds a jar for exactly that Minecraft version (compiled against it, named after it and only
+// accepting that version). Without it the jar covers the whole range of the variant.
+def single = findProperty('mc')
+def mcVersion = single ?: v.mc
+def mcRange = single ?: v.range
+def mcCompat = single ?: v.compat
 
-version = "${project.mod_version}+mc${v.range}"
+version = "${project.mod_version}+mc${mcRange}"
 group = 'io.github.m4ssivee'
 base.archivesName = project.archives_base_name
 
@@ -62,7 +65,7 @@ dependencies {
 }
 
 processResources {
-    def props = [version: project.version, loader: v.loader, mc_compat: v.compat]
+    def props = [version: project.version, loader: v.loader, mc_compat: mcCompat]
     inputs.properties(props)
     filesMatching('fabric.mod.json') {
         expand(props)

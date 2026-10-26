@@ -20,13 +20,10 @@ you can place the next crystal right away, even in the same tick.
 
 ## Supported versions
 
-| Jar | Minecraft |
-|---|---|
-| `MarlowsCrystalOptimizerForMCPVP-<version>+mc1.21-1.21.4.jar` | 1.21 - 1.21.4 |
-| `MarlowsCrystalOptimizerForMCPVP-<version>+mc1.21.5-1.21.10.jar` | 1.21.5 - 1.21.10 |
-| `MarlowsCrystalOptimizerForMCPVP-<version>+mc1.21.11.jar` | 1.21.11 |
+Minecraft 1.21 - 1.21.11, one jar per version: `MarlowsCrystalOptimizerForMCPVP-<version>+mc<minecraft>.jar`
+(for example `...+mc1.21.4.jar` for 1.21.4).
 
-Fabric Loader only. Fabric API is **not** required.
+Requires Fabric Loader and [m4lib](https://github.com/m4ssivee/m4lib) (any version). m4lib itself needs Fabric API.
 
 ## Configuration
 

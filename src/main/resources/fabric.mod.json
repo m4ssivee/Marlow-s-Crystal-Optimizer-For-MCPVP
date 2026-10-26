@@ -27,6 +27,7 @@
   "depends": {
     "fabricloader": ">=${loader}",
     "minecraft": "${mc_compat}",
-    "java": ">=21"
+    "java": ">=21",
+    "m4lib": "*"
   }
 }
